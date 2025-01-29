@@ -1,0 +1,21 @@
+<label class="relative block group">
+  <span class="sr-only" >Search</span>
+  <i 
+    class="fa-solid fa-magnifying-glass absolute inset-y-0 left-0 flex items-center pl-3 pr-3  
+    group-focus-within:bg-blue-500 rounded-l-xl
+    group-focus-within:text-white text-slate-700 "
+  >
+  </i>
+  <input 
+    #txt
+    (keyup.enter)="sengTerm()"
+    type="text" 
+    class=" w-full focus:outline-none pl-12 italic focus:not-italic text-base border shadow-xl focus:border-2 pr-4 focus:border-blue-300 py-2 rounded-xl" 
+    placeholder="{{placeHolder}}" >
+</label>
+
+<!-- <label class="relative block">
+  <span class="sr-only">Search</span>
+  <i class="fa-solid fa-magnifying-glass absolute inset-y-0 left-0 flex items-center pl-2"></i>
+  <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search"/>
+</label> -->
