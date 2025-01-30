@@ -1,4 +1,5 @@
-<article class="w-full" >
+<article class="w-full space-y-6" >
+  <h1 class="text-2xl font-semibold text-slate-800 underline underline-offset-8 " >By Capital</h1>
   <section>
     <shared-search-box
       (valueSearchBox)="searchByCapital($event)"
@@ -6,6 +7,6 @@
     ></shared-search-box>
   </section>
   <section>
-
+    <countries-capital-table [countries]="countries" ></countries-capital-table>
   </section>
 </article>
