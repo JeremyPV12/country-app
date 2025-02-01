@@ -10,6 +10,16 @@ To start a local development server, run:
 ng serve
 ```
 
+```bash
+"build:href":"ng build --base-href", 
+"build:github":"npm run delete:docs && npm run build:href && npm run copy:dist", 
+"delete:docs":"del docs", 
+"copy:dist":"copyfiles dist/gifs/browser/* ./docs -f"
+
+npm install del-cli --save-dev
+npm i copyfiles --save-dev   
+```
+
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding

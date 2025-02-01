@@ -6,10 +6,14 @@
     group-focus-within:text-white text-slate-700 "
   >
   </i>
+<!-- (keyup.enter)="sengTerm()" -->
+
+<!-- Implementacion de un deep bouncer -->
   <input 
     #txt
-    (keyup.enter)="sengTerm()"
+    [value]="valuerecibe"
     type="text" 
+    (keyup)="onKeyPress(txt.value)"
     class=" w-full focus:outline-none pl-12 italic focus:not-italic text-base border shadow-xl focus:border-2 pr-4 focus:border-blue-300 py-2 rounded-xl" 
     placeholder="{{placeHolder}}" >
 </label>

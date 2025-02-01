@@ -1,3 +1,13 @@
-<p>
-  by-country-page works!
-</p>
+<article class="w-full space-y-6" >
+  <h1 class="text-2xl font-semibold text-slate-800  border-blue-300 border-b-2 pb-3" >By Country</h1>
+  <section>
+    <shared-search-box
+      [valuerecibe]="dynamicValue"
+      (onDebounce)="searchByCountry($event)"
+      [placeHolder]="'Search capitals ...'"
+    ></shared-search-box>
+  </section>
+  <section>
+    <countries-capital-table [countries]="countries" ></countries-capital-table>
+  </section>
+</article>

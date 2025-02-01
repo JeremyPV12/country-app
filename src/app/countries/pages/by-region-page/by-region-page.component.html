@@ -1,3 +1,15 @@
-<p>
-  by-region-page works!
-</p>
+<article class="w-full space-y-6" >
+  <h1 class="text-2xl font-semibold text-slate-800  border-blue-300 border-b-2 pb-3" >By Region</h1>
+  <section>
+    <ul class="flex justify-between" >
+      @for (region of regions; track $index) {
+        <li
+        [ngClass]="{'bg-sky-100': selectedRegion == region}" 
+        class="border-2 border-sky-300 hover:bg-sky-200 cursor-pointer px-5 py-2 rounded-xl" (click)="searchByRegion(region)" >{{region}}</li>
+      }
+    </ul>
+  </section>
+  <section>
+    <countries-capital-table [countries]="countries" ></countries-capital-table>
+  </section>
+</article>
